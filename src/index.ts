@@ -1,4 +1,1 @@
-export function hello(name: string): string {
-  const text = `Hello ${name}`;
-  return text;
-}
+export { extractList, ExtractListOptions } from "./extract-list";
