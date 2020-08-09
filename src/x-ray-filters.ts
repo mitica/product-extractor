@@ -13,5 +13,7 @@ export default {
   object: (value: string) =>
     typeof value === "string" ? JSON.parse(value) : value,
   objectField: (value: object, field: string) =>
-    typeof value === "object" ? R.path(field.split(/\./g), value) : value
+    typeof value === "object" ? R.path(field.split(/\./g), value) : value,
+  digits: (value: string) =>
+    typeof value === "string" ? value.replace(/[^\d]+/g, "") : value
 };

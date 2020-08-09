@@ -18,6 +18,8 @@ Extract products from HTML.
 
 - **objectField** - get an object's field value by its path.
 
+- **digits** - remove all non-digit characters
+
 ```
 const user = { name: "Jon", tags: ["JSON", "HTML"] };
 ```
