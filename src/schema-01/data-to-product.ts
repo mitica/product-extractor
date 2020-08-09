@@ -12,8 +12,7 @@ export default (data: Schema01ProductData): Product | null => {
     else if (typeof price.integerPart === "number") {
       product.price = price.integerPart;
       if (typeof price.decimalPart === "number" && price.decimalPart > 0)
-        product.price +=
-          price.decimalPart / price.decimalPart.toString().length;
+        product.price += parseFloat(`0.${price.decimalPart}`);
     }
   }
 
